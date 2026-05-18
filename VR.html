@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VR Portfolio</title>
+    <link rel="icon" type="image/png" href="images/VR - Copy.png">
+    <link rel="stylesheet" href="properties.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.177/pdf.min.js"></script>
+</head>
+
+<body>
+    <button id="start-vahi" class="floating-vahi-button" type="button" aria-label="Start Vahi Assistant">V</button>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>My Portfolio</h1>
+                <p id="subtitle">Animated web experience with live time, weather, and voice controls.</p>
+            </div>
+        </header>
+
+        <section class="status-panel">
+            <div class="card">
+                <h2>Current time</h2>
+                <div id="time">Loading...</div>
+            </div>
+            <div class="card">
+                <h2>Weather</h2>
+                <div id="weather">Loading weather...</div>
+            </div>
+        </section>
+
+        <section class="assistant-panel">
+            <div class="card wide">
+                <h2>VAHI Assistant</h2>
+                <div class="assistant-controls">
+                    <button id="stop-vahi" type="button">Stop VAHI Assistant</button>
+                </div>
+                <div id="assistant-output" class="assistant-output">Press the button and say "Vahi" to wake the assistant.</div>
+                <div class="assistant-chat">
+                    <div id="chat-history" class="chat-history"></div>
+                    <div class="chat-input-row">
+                        <input id="chat-input" type="text" placeholder="Type a command or ask Vahi..." />
+                        <button id="send-chat" type="button">Send</button>
+                    </div>
+                </div>
+                <div id="news-results" class="news-results"></div>
+            </div>
+        </section>
+
+        <section class="voice-panel">
+            <div class="card wide">
+                <h2>Voice & Text Reader</h2>
+                <div class="voice-options">
+                    <label for="voice-select">Select voice:</label>
+                    <select id="voice-select"></select>
+                </div>
+                <button id="speak-status" type="button">Speak current status</button>
+                <div class="file-controls">
+                    <input id="text-file" type="file" accept=".txt,.pdf">
+                    <button id="load-file" type="button">Load file</button>
+                    <button id="start-reading" type="button">Start reading file</button>
+                    <button id="stop-reading" type="button">Stop reading</button>
+                </div>
+                <div id="file-text" class="file-text">Choose a .txt file to display and read aloud.</div>
+            </div>
+        </section>
+
+        <section class="music-panel">
+            <div class="card wide">
+                <h2>Background Music</h2>
+                <audio id="background-audio" controls loop preload="auto">
+                    <source src="music/SL.mp4" type="audio/mp4">
+                    Your browser does not support audio playback.
+                </audio>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <video autoplay loop muted playsinline>
+                <source src="music/SL.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
